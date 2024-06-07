@@ -36,12 +36,12 @@ public class TestData {
     @DataProvider(name = "navigationData")
     public static Object[][] getNavMenuData() {
         return new Object[][]{
-                {BASE_URL, WHATS_NEW_MENU, "What's New", WHATS_NEW_URL, WHATS_NEW_TITLE},
-                {BASE_URL, WOMEN_MENU, "Women", WOMEN_URL, WOMEN_TITLE},
-                {BASE_URL, MEN_MENU, "Men", MEN_URL, MEN_TITLE},
-                {BASE_URL, GEAR_MENU, "Gear", GEAR_URL, GEAR_TITLE},
-                {BASE_URL, TRAINING_MENU, "Training", TRAINING_URL, TRAINING_TITLE},
-                {BASE_URL, SALE_MENU, "Sale", SALE_URL, SALE_TITLE}
+                {BASE_URL, WHATS_NEW_MENU, WHATS_NEW_URL, WHATS_NEW_TITLE},
+                {BASE_URL, WOMEN_MENU, WOMEN_URL, WOMEN_TITLE},
+                {BASE_URL, MEN_MENU, MEN_URL, MEN_TITLE},
+                {BASE_URL, GEAR_MENU, GEAR_URL, GEAR_TITLE},
+                {BASE_URL, TRAINING_MENU, TRAINING_URL, TRAINING_TITLE},
+                {BASE_URL, SALE_MENU, SALE_URL, SALE_TITLE}
 
         };
     }
