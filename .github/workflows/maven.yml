@@ -53,7 +53,7 @@ jobs:
       uses: dorny/test-reporter@v1.9.1
       if: success() || failure()
       with:
-        name: Test Report for ${{ matrix.os }}
+        name: Dorny Test Report for ${{ matrix.os }}
         path: target/surefire-reports/TEST-*.xml
         reporter: java-junit
 
