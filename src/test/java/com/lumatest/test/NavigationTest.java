@@ -34,14 +34,14 @@ public class NavigationTest extends BaseTest {
     }
 
     @Test(dataProvider = "navigationData", dataProviderClass = TestData.class)
-    public void testNavigationMenu(String baseURL, By navbarMenu, String item, String expectedURL, String expectedTitle) {
+    public void testNavigationMenu(String baseURL, By navbarMenu, String expectedURL, String expectedTitle) {
         //Allure.step("SetUp expected results");
 
        // Allure.step("Open'What's New' URL");
         Allure.step("Open Base URL");
         getDriver().get(baseURL);
 
-        Allure.step("Click on Navigation Menu " + "\"" + item + "\"");
+        Allure.step("Click on Navigation Menu " + "\"" + expectedTitle + "\"");
         getDriver().findElement(navbarMenu).click();
 
         Allure.step("Collect actualURL,actualTitle");
