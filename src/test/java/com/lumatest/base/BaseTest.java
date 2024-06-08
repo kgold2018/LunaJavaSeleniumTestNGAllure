@@ -35,7 +35,4 @@ public abstract class BaseTest {
         return this.driver;
     }
 
-
-
-
 }
