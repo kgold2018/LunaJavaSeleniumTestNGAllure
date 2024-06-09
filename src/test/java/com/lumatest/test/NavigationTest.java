@@ -33,7 +33,7 @@ public class NavigationTest extends BaseTest {
 
     }
 
-    @Test(
+    @Test
             groups = {"Smoke", "Regression"},
             description = "TC-02 Top Menu Navigation",
             dataProvider = "navigationData",
