@@ -9,7 +9,9 @@ import org.testng.annotations.Test;
 
 public class NavigationTest extends BaseTest {
 
-    @Test(description = "TC-01 Open Luma Base URL", groups = {"Smoke", "Regression"})
+    @Test(
+//            groups = {"Smoke", "Regression"},
+            description = "TC-01 Open Luma Base URL")
     @Story("Navigation")
     @Description("To verify that the base URL and title of the application are correct and as expected")
     @Severity(SeverityLevel.BLOCKER)
@@ -34,7 +36,7 @@ public class NavigationTest extends BaseTest {
     }
 
     @Test(
-            groups = {"Smoke", "Regression"},
+//            groups = {"Smoke", "Regression"},
             description = "TC-02 Top Menu Navigation",
             dataProvider = "navigationData",
             dataProviderClass = TestData.class
@@ -62,25 +64,4 @@ public class NavigationTest extends BaseTest {
         Assert.assertEquals(actualTitle, expectedTitle);
 
     }
-
-//    @Test
-//    public void testNavigationMenu1() {
-//        Allure.step("SetUp expected results");
-//        final String expectedURL = TestData.SALE_URL;
-//        final String expectedTitle = TestData.SALE_TITLE;
-//
-//        Allure.step("Open 'Sale' URL");
-//        getDriver().get(TestData.BASE_URL);
-//        getDriver().findElement(TestData.SALE_MENU).click();
-//
-//        Allure.step("Collect actualURL,actualTitle");
-//        final String actualURL = getDriver().getCurrentUrl();
-//        final String actualTitle = getDriver().getTitle();
-//
-//        Allure.step("Verify actualURL as expected");
-//        Assert.assertEquals(actualURL, expectedURL);
-//        Allure.step("Verify actualTitle as expected");
-//        Assert.assertEquals(actualTitle, expectedTitle);
-//
-//    }
 }

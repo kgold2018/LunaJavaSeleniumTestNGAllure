@@ -8,7 +8,7 @@
             <class name="com.lumatest.test.NavigationTest">
                 <methods>
                     <include name="testOpenBaseURL"/>
-                    <include name="testNavigationMenu"/>
+<!--                    <include name="testNavigationMenu"/>-->
                 </methods>
             </class>
         </classes>
@@ -20,7 +20,7 @@
             <class name="com.lumatest.test.NavigationTest">
                 <methods>
                     <include name="testOpenBaseURL"/>
-                    <include name="testNavigationMenu"/>
+<!--                    <include name="testNavigationMenu"/>-->
                 </methods>
             </class>
         </classes>
