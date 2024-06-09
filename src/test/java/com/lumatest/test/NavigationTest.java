@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class NavigationTest extends BaseTest {
 
-    @Test(description = "TC-01 Open Luma Base URL")
+    @Test(description = "TC-01 Open Luma Base URL", groups = {"Smoke", "Regression"})
     @Story("Navigation")
     @Description("To verify that the base URL and title of the application are correct and as expected")
     @Severity(SeverityLevel.BLOCKER)
@@ -34,6 +34,7 @@ public class NavigationTest extends BaseTest {
     }
 
     @Test(
+            groups = {"Smoke", "Regression"},
             description = "TC-02 Top Menu Navigation",
             dataProvider = "navigationData",
             dataProviderClass = TestData.class
