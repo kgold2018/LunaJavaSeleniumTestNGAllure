@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Jun 09 21:00:16 GMT 2024","Sun Jun 09 21:00:18 GMT 2024","1283","All Test Suite","Chrome test","com.lumatest.test.NavigationTest","com.lumatest.test.NavigationTest","testOpenBaseURL","TC-01 Open Luma Base URL","To verify that the base URL and title of the application are correct and as expected"
+"passed","Sun Jun 09 21:00:19 GMT 2024","Sun Jun 09 21:00:21 GMT 2024","1515","All Test Suite","Firefox test","com.lumatest.test.NavigationTest","com.lumatest.test.NavigationTest","testOpenBaseURL","TC-01 Open Luma Base URL","To verify that the base URL and title of the application are correct and as expected"
