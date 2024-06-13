@@ -6,25 +6,26 @@
         <parameter name="browser" value="chrome" />
         <classes>
             <class name="com.lumatest.test.NavigationTest"/>
-            <class name ="com.lumatest.test.ProductPageTest">
+            <class name ="com.lumatest.test.ProductPageTest"/>
 
 <!--                <methods>-->
 <!--                    <include name="testOpenBaseURL"/>-->
 <!--                    <include name="testNavigationMenu"/>-->
 <!--                </methods>-->
-            </class>
+<!--            </class>-->
         </classes>
     </test>
 
     <test verbose="2" name="Firefox test">
         <parameter name="browser" value="firefox" />
         <classes>
-            <class name="com.lumatest.test.NavigationTest">
+            <class name="com.lumatest.test.NavigationTest"/>
+            <class name ="com.lumatest.test.ProductPageTest"/>
 <!--                <methods>-->
 <!--                    <include name="testOpenBaseURL"/>-->
 <!--                    <include name="testNavigationMenu"/>-->
 <!--                </methods>-->
-            </class>
+<!--            </class>-->
         </classes>
     </test>
 </suite>
