@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="Crossbrowser Test Suite" parallel="tests" thread-count="2" data-provider-thread-count="2">
 
     <test verbose="2" name="Chrome test">
         <parameter name="browser" value="chrome" />
         <classes>
-            <class name="com.lumatest.test.NavigationTest">
-                <methods>
-                    <include name="testOpenBaseURL"/>
+            <class name="com.lumatest.test.NavigationTest"/>
+            <class name ="com.lumatest.test.ProductPageTest">
+
+<!--                <methods>-->
+<!--                    <include name="testOpenBaseURL"/>-->
 <!--                    <include name="testNavigationMenu"/>-->
-                </methods>
+<!--                </methods>-->
             </class>
         </classes>
     </test>
@@ -18,10 +20,10 @@
         <parameter name="browser" value="firefox" />
         <classes>
             <class name="com.lumatest.test.NavigationTest">
-                <methods>
-                    <include name="testOpenBaseURL"/>
+<!--                <methods>-->
+<!--                    <include name="testOpenBaseURL"/>-->
 <!--                    <include name="testNavigationMenu"/>-->
-                </methods>
+<!--                </methods>-->
             </class>
         </classes>
     </test>
