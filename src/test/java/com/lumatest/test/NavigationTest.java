@@ -10,8 +10,10 @@ import org.testng.annotations.Test;
 public class NavigationTest extends BaseTest {
 
     @Test(
-//            groups = {"Smoke", "Regression"},
-            description = "TC-01 Open Luma Base URL")
+            groups = {"smoke", "regression"},
+            description = "TC-01 Open Luma Base URL",
+            testName = "NAVIGATION | Open Base URL"
+    )
     @Story("Navigation")
     @Description("To verify that the base URL and title of the application are correct and as expected")
     @Severity(SeverityLevel.BLOCKER)
@@ -21,8 +23,8 @@ public class NavigationTest extends BaseTest {
         final String expectedURL = TestData.BASE_URL + "/";
         final String expectedTitle = TestData.BASE_URL_TITLE;
 
-        Allure.step("Open base URL");
-        getDriver().get(TestData.BASE_URL);
+//        Allure.step("Open base URL");
+//        getDriver().get(TestData.BASE_URL);
 
         Allure.step("Collect actual URL and actual title");
         final String actualURL = getDriver().getCurrentUrl();
@@ -36,10 +38,11 @@ public class NavigationTest extends BaseTest {
     }
 
     @Test(
-//            groups = {"Smoke", "Regression"},
+            groups = {"smoke", "regression"},
             description = "TC-02 Top Menu Navigation",
             dataProvider = "navigationData",
-            dataProviderClass = TestData.class
+            dataProviderClass = TestData.class,
+            testName = "NAVIGATION | Navigate to top menus"
     )
     @Story("Navigation")
     @Severity(SeverityLevel.CRITICAL)
@@ -48,8 +51,8 @@ public class NavigationTest extends BaseTest {
     @Link(TestData.BASE_URL)
     public void testNavigationMenu(String baseURL, By navbarMenu, String expectedURL, String expectedTitle) {
 
-        Allure.step("Open Base URL");
-        getDriver().get(baseURL);
+//        Allure.step("Open Base URL");
+//        getDriver().get(baseURL);
 
         Allure.step("Click on Navigation Menu " + "\"" + expectedTitle + "\"");
         getDriver().findElement(navbarMenu).click();

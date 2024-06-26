@@ -15,6 +15,8 @@
         <allure.version>2.24.0</allure.version>
         <aspectj.version>1.9.20.1</aspectj.version>
 
+        <tests.skip>false</tests.skip>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
@@ -64,14 +66,15 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
                 <configuration>
+                    <skipTests>${tests.skip}</skipTests>
                     <argLine>
                         -Dfile.encoding=${project.build.sourceEncoding}
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                     <suiteXmlFiles>
-                        <suiteXmlFile>
-                            testng.xml
-                        </suiteXmlFile>
+<!--                            <suiteXmlFile>xmlSuits/smoke.xml</suiteXmlFile>-->
+<!--                            <suiteXmlFile>xmlSuits/chrome.xml</suiteXmlFile>-->
+                            <suiteXmlFile>xmlSuits/regression.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
                 <dependencies>
