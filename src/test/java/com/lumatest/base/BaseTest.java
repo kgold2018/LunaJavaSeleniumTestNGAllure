@@ -7,7 +7,6 @@ import com.lumatest.utils.ReportUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.Reporter;
@@ -16,8 +15,7 @@ import org.testng.annotations.*;
 public abstract class BaseTest {
     private WebDriver driver;
     private final ThreadLocal<WebDriver> threadLocalDriver = new ThreadLocal<>();
-   // private final String browser = "chrome";
-//   private final String browser = "firefox";
+
     @BeforeSuite
     protected void setupWebDriverManager() {
         WebDriverManager.chromedriver().setup();
@@ -25,10 +23,8 @@ public abstract class BaseTest {
     }
 
     @Parameters("browser")
-  //  String browser
-    @BeforeMethod()
+    @BeforeMethod(alwaysRun = true)
     protected void setupDriver(@Optional("chrome") String browser, ITestContext context, ITestResult result) {
-    //protected void setupDriver(String browser) {
         Reporter.log("--------------------------------------------------------------------------", true);
         this.driver = DriverUtils.createDriver(browser, this.driver);
         this.threadLocalDriver.set(this.driver);
@@ -43,20 +39,7 @@ public abstract class BaseTest {
         System.exit(1);
       }
 
-//        if(getDriver() == null) {
-//            Reporter.log("ERROR: Unknown parameter 'browser' - '" + browser + "'.", true);
-//
-//            System.exit(1);
-//        }
-
-        Reporter.log("INFO: " + browser.toUpperCase() + " driver created.", true);
-//        if(this.browser.equals("chrome")) {
-//            this.driver = DriverUtils.createChromeDriver(getDriver());
-//            Reporter.log("INFO: Chrome browser created.", true);
-//        } else {
-//            Reporter.log("ERROR: Unknown parameter 'browser' - '" + this.browser + "'.", true);
-//            System.exit(1);
-//        }
+      Reporter.log("INFO: " + browser.toUpperCase() + " driver created.", true);
       Allure.step("Open base URL");
       getDriver().get(TestData.BASE_URL);
     }
